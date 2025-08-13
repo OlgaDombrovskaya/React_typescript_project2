@@ -22,20 +22,20 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-h1{
-font-size: 60px;
-color: #d1e3ff;
+h1 {
+  font-size: 60px;
+  color: #d1e3ff;
 }
 
-h2{
-font-size: 28px;
-color: #605959e9;
-margin-bottom: 14px;
-text-decoration: underline;
+h2 {
+  font-size: 28px;
+  color: #605959e9;
+  margin-bottom: 14px;
+  text-decoration: underline;
 }
 
-p{
-font-size: 18px;
-color: #760f0fe9;
-margin-bottom: 5px;
+p {
+  font-size: 18px;
+  color: #760f0fe9;
+  margin-bottom: 5px;
 }
