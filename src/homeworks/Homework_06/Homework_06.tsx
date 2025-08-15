@@ -1,14 +1,11 @@
 import "./styles.css";
 
-import { v4 } from "uuid";
-
-// import { type Car } from "./types";
-
-  interface Car {  // прописывается до функции и использовать интерфейс если объекты
-    brand: string;
-    price: number;
-    isDiesel: boolean;
-  }
+interface Car {
+  // прописывается до функции и использовать интерфейс если объекты
+  brand: string;
+  price: number;
+  isDiesel: boolean;
+}
 
 function Homework_06() {
 
