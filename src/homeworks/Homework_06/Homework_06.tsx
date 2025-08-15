@@ -1,11 +1,17 @@
 import "./styles.css";
 
-function Homework_06() {
-  interface Car {
+import { v4 } from "uuid";
+
+// import { type Car } from "./types";
+
+  interface Car {  // прописывается до функции и использовать интерфейс если объекты
     brand: string;
     price: number;
     isDiesel: boolean;
   }
+
+function Homework_06() {
+
   const cars: Car[] = [
     { brand: "BMW", price: 20000, isDiesel: true },
     { brand: "Mercedes", price: 22000, isDiesel: false },
