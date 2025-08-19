@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    margin: 15px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid yellowgreen;
+    color: aliceblue;
+    background-color: rgb(128, 17, 225);
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+p{
+    text-align: center;
+}
+img{
+    width: 100%;
+}

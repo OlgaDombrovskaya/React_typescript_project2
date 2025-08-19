@@ -1,7 +1,11 @@
+//Consultation
+// import Consultation_03 from "consultations/Consultation_03/Consultation_03";
+import Consultation_04 from "consultations/Consultation_04/Consultation_04";
+
 //Homeworks
 // import Homework_06 from "./homeworks/Homework_06/Homework_06";
 // import Homework_06 from "lessons/Lesson_07/Homework_06/Homework_06";
-import Homework_07 from "homeworks/Homework_07/Homework_07";
+// import Homework_07 from "homeworks/Homework_07/Homework_07";
 
 // Lessons
 // import Lesson_06 from "lessons/Lesson_06/Lesson_06"
@@ -10,9 +14,13 @@ import "./App.css";
 
 function App() {
   return <div className="app">
+ {/* Consultations */}
+       {/* <Consultation_03 /> */}
+       <Consultation_04 />
+
  {/* Homeworks */}
        {/* <Homework_06 /> */}
-       <Homework_07 />
+       {/* <Homework_07 /> */}
 
 
   {/* Lessons */}
