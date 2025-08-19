@@ -29,10 +29,54 @@ console.log(x);
 // Явно vs Неявно
 // При объявлении переменной мы указываем тип данных:
 
-let y: number = 10; // Пример явной типизации
+let y: number = 100; // Пример явной типизации
 let p: string;
 p = "Hello";
-// 
+
+//=======================================================================
+// Джненерики - это способ писать универсальный код.
+//который работает с разными типами, но при этом сохраняет строгую типизацию.
+//Они позволяют не привязываться к конкретному типу (string, number и т.п),
+//а вместо этого использовать параметр типа (обычно Т).
+
+// Главная  идея:
+//Ты пишешь функцию /тип/класс один раз,
+// а используешь с разными типами данных без потери подсказок и проверок TypeScript.
+
+// function identity(value: any): any{
+// return value;
+// }
+
+// let num = identity(42); // num: any - TS не знает, что это number
+// let str = identity("Hello"); // str: any - подсказок нет
+// // Проблема: теряется информация о типе.
+
+//===============================================
+
+// Пример 2 с Дженериком
+
+// function identity <T>(value: T): T {
+// return value;
+// }
+
+// let num = identity<number>(42); // num: number
+// let str = identity<string>("Hello"); // str: string
+
+//=================================================================
+
+// Пример 3 с Джененриком
+
+//function getFirstElement<T>(arr: T[]): T{
+// return arr[0];
+// }
+
+// let firstNum = getFirstElement([1,2,3]); // T = number
+// let firstStr = getFirstElement(["a", "b", "c"]); // T = string
+
+// TS автоматически выводит тип (не всегда нужно явно писать <number>).
+
+//=====================================================
+
 let isDrunk: boolean = true;
 
 // Ключевое слово type
@@ -43,20 +87,20 @@ let myAge: Age = 29;
 
 let k:number| string = 10;
 k = "Hello";
-console.log()
+console.log(k);
 
-let qwerty:any
+let qwerty:any  //почти не используется
 
 // Пример Union type
-type Pet = "cat"| "dog";
+type Pet = "cat"| "dog"; // кроме строки cat или dog не пройдет
 let petOfAlex: Pet ="cat"
 petOfAlex = "dog"
 
 // Можно расширить Union type
-type ExtendedPet = Pet | "bird";
+type ExtendedPet = Pet | "bird"; // кроме строки cat,dog или bird не будет
 let petOfAlex2: ExtendedPet = "cat"
 
-type Gender = "male" | "female";
+type Gender = "male" | "female"; // здесть используется два type
 type ExtendedGender = Gender | "non binary person";
 
 // Как типизировать массив стринговых значений
@@ -92,7 +136,7 @@ const frankestein: Monster ={
     isEvil: false
 }
 
-interface ExtendedMonster extends Monster{
+interface ExtendedMonster extends Monster{ //расшириние через extends
     isFlying:boolean
 }
 
@@ -105,18 +149,50 @@ const dracula: ExtendedMonster ={
     
 }
 
-// Опциональные поля
+// Опциональные поля ..?..(если есть такое поле -- отдай мне значение)
 
 interface Food{
     title: string;
     isSweet?: boolean;
 }
 const pancake: Food ={ title:"Pancakes", isSweet: true};
-const carrot: Food ={ title:"Carrot",}; // не  ругается, что не указали поле
+const carrot: Food ={ title:"Carrot"}; // не  ругается, что не указали поле
 // isSweet, поскольку оно является опциональным
 
 console.log(pancake);
 console.log(carrot);
+
+
+// Типизация функций
+// Нужно типизировать параметры и возвращаемое значение
+
+function sum(a:number, b:number):number{
+    return a+b;
+}
+const dev = (a: number, b:number) =>a/b; //стрелочная функция отличается отсутствием слова function и return(нет this, ссылки на объект)
+
+console.log(sum(10,12));
+console.log(dev(20,2));
+
+function toUpper(str: ExtendedPet):string{
+    return str.toUpperCase()//str - имя параметра(может быть любым)
+}
+console.log(toUpper("cat"))
+
+//явная конвертация 
+// ("b" + "a" + + "a" + "a" .toLowerCase() "banana" - - - (символы + "a" преобразуются в nan)
+const nine = Number("9"); 
+const nineStr = String(9);
+
+console.log(nine);
+console.log(nineStr);
+
+// | Ситуация                          | Рекомендация            |          |
+// | --------------------------------- | ----------------------- | -------- |
+// | Описание формы объекта            | `interface` ✅           |          |
+// | Объединения (\`                   | `, `&\`, условные типы) | `type` ✅ |
+// | Расширение нескольких интерфейсов | `interface` ✅           |          |
+// | Комбинирование разных типов       | `type` ✅                |          |
 
 
 // Создать интерфейс город City
@@ -153,29 +229,6 @@ const Berlin: City={
 console.log(Berlin);
 
 
-// Типизация функций
-// Нужно типизировать параметры и возвращаемое значение
-
-function sum(a:number, b:number):number{
-    return a+b;
-}
-const dev = (a: number, b:number) =>a/b;
-
-console.log(sum(10,12));
-console.log(dev(20,2));
-
-function toUpper(str: ExtendedPet):string{
-    return str.toUpperCase()
-}
-console.log(toUpper("cat"))
-
-const nine = Number("9");
-const nineStr = String(9);
-
-console.log(nine);
-console.log(nineStr);
-
-
 // interface чаще используется для описания структур классов, API-ответов и объектов,
 //  потому что они могут автоматически расширяться при объединении объявлений:
 
@@ -193,8 +246,6 @@ console.log(nineStr);
 //   name: 'John',
 //   age: 30,
 // };
-
-
 
 
 
@@ -219,22 +270,6 @@ console.log(nineStr);
 //   maxHeight: 11_000,
 //   capacity: 100
 // }
-
-
-
-
-
-
-
-
-// | Ситуация                          | Рекомендация            |          |
-// | --------------------------------- | ----------------------- | -------- |
-// | Описание формы объекта            | `interface` ✅           |          |
-// | Объединения (\`                   | `, `&\`, условные типы) | `type` ✅ |
-// | Расширение нескольких интерфейсов | `interface` ✅           |          |
-// | Комбинирование разных типов       | `type` ✅                |          |
-
-
 
 
 
