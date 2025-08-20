@@ -1,4 +1,4 @@
-import { ButtonComponent } from "./styles";
+import { ButtonComponent } from "./styles.ts";
 import { type ButtonProps } from "./types";
 
 function Button({
