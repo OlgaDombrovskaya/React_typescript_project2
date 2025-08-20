@@ -1,4 +1,6 @@
-import GlobalStyles from "styles/GlobalStyles";
+//Consultation
+// import Consultation_03 from "consultations/Consultation_03/Consultation_03";
+// import Consultation_04 from "consultations/Consultation_04/Consultation_04";
 
 //Homeworks
 // import Homework_06 from "./homeworks/Homework_06/Homework_06";
@@ -13,11 +15,15 @@ import Lesson_08 from "lessons/Lesson_08/Lesson_08";
 import "./App.css";
 
 function App() {
-  return (
-    <div className="app">
-      {/* Homeworks */}
-      {/* <Homework_06 /> */}
-      {/* <Homework_07 /> */}
+  return <div className="app">
+ {/* Consultations */}
+       {/* <Consultation_03 /> */}
+       {/* <Consultation_04 /> */}
+
+ {/* Homeworks */}
+       {/* <Homework_06 /> */}
+       {/* <Homework_07 /> */}
+
 
       {/* Lessons */}
       {/* <Lesson_06 /> */}
