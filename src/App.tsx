@@ -15,14 +15,15 @@ import Lesson_08 from "lessons/Lesson_08/Lesson_08";
 import "./App.css";
 
 function App() {
-  return <div className="app">
- {/* Consultations */}
-       {/* <Consultation_03 /> */}
-       {/* <Consultation_04 /> */}
+  return (
+    <div className="app">
+      {/* Consultations */}
+      {/* <Consultation_03 /> */}
+      {/* <Consultation_04 /> */}
 
- {/* Homeworks */}
-       {/* <Homework_06 /> */}
-       {/* <Homework_07 /> */}
+      {/* Homeworks */}
+      {/* <Homework_06 /> */}
+      {/* <Homework_07 /> */}
 
 
       {/* Lessons */}
