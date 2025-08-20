@@ -3,60 +3,51 @@
  (у Button - это disabled и isRed, у Input - это disabled и error)*/
 
 import Button from "components/Button/Button";
-// import Input from "components/Input/Input";
+import Input from "components/Input/Input";
 
-import {
-  PageWrapper,
-  Paragraph,
-  ButtonControl,
-  Box1,
-  Box2,
-  Box3,
-} from "../../lessons/Lesson_08/styles";
-
-// import { Lesson_07_PageWraper } from "../../lessons/Lesson_07/styles";
+import { PageWrapper, Paragraph, ButtonControl } from "./styles";
 
 function Homework_08() {
   return (
     <PageWrapper>
       <Paragraph>Homework_08</Paragraph>
-      {/* ==== Button===== */}
       <ButtonControl>
         <Button name="Simple Button" />
       </ButtonControl>
-
       <ButtonControl>
-        {/* <Button isRed={true} name="Delete Button" /> */}
         <Button isRed name="Delete Button" />
       </ButtonControl>
+      <ButtonControl>
+        <Button disabled name="Disabled Button" />
+      </ButtonControl>
 
       <ButtonControl>
-        <Button
-          disabled
-          isRed
-          name="Disabled Button"
-          onClick={() => {
-            console.log("Button Works");
-          }}
+        <Input
+          id="simple_input"
+          name="simple"
+          label="Simple input"
+          placeholder="Simple input element"
+        />
+      </ButtonControl>
+      <ButtonControl>
+        <Input
+          id="error_input"
+          name="error"
+          label="Error input"
+          placeholder="Error input element"
+          error="Some Network Error"
         />
       </ButtonControl>
 
-      {/* ==== Input===== */}
-
-      {/* <Lesson_07_PageWraper>
-        <Button name="Send" onClick={sendDataToServer} />
+      <ButtonControl>
         <Input
-          id="test-id"
-          name="test"
-          label="Test Label"
-          placeholder="Test placeholder"
+          id="disabled_input"
+          name="disabled"
+          label="Disabled input"
+          placeholder="Disabled input element"
+          disabled
         />
-        <Counter onMinus={onMinus} onPlus={onPlus} count={count} />
-      </Lesson_07_PageWraper> */}
-
-      <Box1>Box 1</Box1>
-      <Box2>Box 2</Box2>
-      <Box3>Box 3</Box3>
+      </ButtonControl>
     </PageWrapper>
   );
 }

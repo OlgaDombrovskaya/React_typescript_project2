@@ -16,11 +16,10 @@ import Homework_08 from "homeworks/Homework_08/Homework_08";
 // import Lesson_07 from "lessons/Lesson_07/Lesson_07";
 // import Lesson_08 from "lessons/Lesson_08/Lesson_08";
 
-import "./App.css";
-
 function App() {
   return (
-    <div className="app">
+    // React Fragment остается
+    <> 
       <GlobalStyles/>
       {/* Consultations */}
       {/* <Consultation_03 /> */}
@@ -36,7 +35,7 @@ function App() {
       {/* <Lesson_06 /> */}
       {/* <Lesson_07 /> */}
       {/* <Lesson_08 /> */}
-    </div>
+    </>
   );
 }
 

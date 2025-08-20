@@ -1,7 +1,15 @@
 import { type InputProps } from "./types";
 import { InputComponent, InputLabel, InputWrapper } from "./styles.ts";
 
-function Input({ id, name, type = "text", placeholder, label }: InputProps) {
+function Input({
+  id,
+  name,
+  type = "text",
+  placeholder,
+  label,
+  disabled = false,
+  error = undefined,
+}: InputProps) {
   return (
     <InputWrapper>
       <InputLabel htmlFor={id}>{label}</InputLabel>
@@ -10,6 +18,8 @@ function Input({ id, name, type = "text", placeholder, label }: InputProps) {
         name={name}
         type={type}
         placeholder={placeholder}
+        disabled={disabled}
+        $hasError={error}
       />
     </InputWrapper>
   );
