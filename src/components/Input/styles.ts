@@ -69,3 +69,9 @@ export const InputWrapper = styled.div`
   flex-direction: column;
   gap: 4px;
 `;
+
+export const ErrorText = styled.div`
+  height: 18px;
+  font-size: 16px;
+  color: #ff6868ff;
+`;

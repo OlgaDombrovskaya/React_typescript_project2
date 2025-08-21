@@ -1,5 +1,5 @@
 import { type InputProps } from "./types";
-import { InputComponent, InputLabel, InputWrapper } from "./styles.ts";
+import { InputComponent, InputLabel, InputWrapper, ErrorText } from "./styles.ts";
 
 function Input({
   id,
@@ -9,6 +9,8 @@ function Input({
   label,
   disabled = false,
   error = undefined,
+  value,
+  onChange,
 }: InputProps) {
   return (
     <InputWrapper>
@@ -20,7 +22,10 @@ function Input({
         placeholder={placeholder}
         disabled={disabled}
         $hasError={error}
+        value={value}
+        onChange={onChange}
       />
+       {!!error && <ErrorText>{error}</ErrorText>}
     </InputWrapper>
   );
 }
