@@ -28,7 +28,7 @@ const generateBorderColor = (
 
 const generateBorderColorOnFocus = (
   hasError: string | undefined,
-  disabled?: boolean
+  disabled?: boolean | undefined
 ): string => {
   if (disabled) {
     return "#e0e0e0";
