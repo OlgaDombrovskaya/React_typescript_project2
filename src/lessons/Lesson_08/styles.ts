@@ -12,6 +12,7 @@ const commonBoxStyles = css`
   color: white;
 `;
 
+// возвращает стилизованный компонент
 export const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;

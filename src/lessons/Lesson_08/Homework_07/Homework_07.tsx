@@ -23,8 +23,11 @@ function Homework_07() {
     setDislike(0);
   };
 
+  // const isRow = true;
+
   return (
     <div
+    //не лучший способ так как от него снижается производительность и не соблюдается принцип переиспользования
       // style={{ display: "flex", flexDirection: isRow ? "row" : "column" }}
       className="homework_07_page_wrapper"
     >
@@ -33,7 +36,7 @@ function Homework_07() {
         dislike={dislike}
         onDislike={onDislike}
         onLike={onLike}
-        resetResults={resetResults}
+        onReset={resetResults}
       />
     </div>
   );
