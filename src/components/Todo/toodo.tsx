@@ -1,5 +1,6 @@
 
 import React, { useState, type JSX } from 'react';
+import { Container, Input, Btn, Title, List } from './styles';
 
 // Тип для задачи
 type Todo = {
@@ -53,10 +54,10 @@ function TodoList(): JSX.Element {
   // То есть, мы исключаем ту задачу, которую хотим удалить.
 
   return (
-    <div>
-      <h2>Список задач</h2>
+    <Container>
+      <Title>Список задач</Title>
 
-      <input
+      <Input
         type="text"
         value={inputValue}
         placeholder="Новая задача"
@@ -73,11 +74,11 @@ function TodoList(): JSX.Element {
     e.target — элемент, на котором произошло событие (в нашем случае — поле <input>).
     e.target.value — текущий текст, который ввёл пользователь в поле. */}
 
-      <button type="button" onClick={addTodo}>
+      <Btn type="button" onClick={addTodo}>
         Добавить
-      </button>
+      </Btn>
 
-      <ul>
+      <List>
         {todos.map((todo: Todo) => (
           <li key={todo.id}>
             <input
@@ -93,13 +94,13 @@ function TodoList(): JSX.Element {
             >
               {todo.text}
             </span>
-            <button type="button" onClick={() => removeTodo(todo.id)}>
+            <Btn type="button" onClick={() => removeTodo(todo.id)}>
               Удалить
-            </button>
+            </Btn>
           </li>
         ))}
-      </ul>
-    </div>
+      </List>
+    </Container>
   );
 }
 

@@ -1,0 +1,42 @@
+.user-card {
+    
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-card p {
+  margin: 8px 0;
+}
+
+.user-name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.user-age {
+  color: #333;
+}
+
+.user-age.warning {
+  color: #c00;
+  font-style: italic;
+}
+
+.user-username {
+  color: #555;
+}
+
+.user-email a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.user-email a:hover {
+  text-decoration: underline;
+}

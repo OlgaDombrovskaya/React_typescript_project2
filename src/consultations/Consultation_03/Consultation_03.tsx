@@ -1,5 +1,4 @@
 import type { JSX } from 'react';
-import "./styles.css";
 import Sandwich from "components/Sandwich/Sandwich";
 import TodoList from "components/Todo/toodo";
 
