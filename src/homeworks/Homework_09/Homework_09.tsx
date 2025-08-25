@@ -15,7 +15,8 @@ import { useEffect, useState } from "react";
 function Homework_09() {
   const JOKE_API_URL: string =
     "https://official-joke-api.appspot.com/random_joke";
-  const [Joke, setJoke] = useState<string | undefined>(undefined);
+  const [setup, setSetup] = useState<string | undefined>(undefined);
+  const [punchline, setPunchline] = useState<string | undefined>(undefined);
   const [error, setError] = useState<string | undefined>(undefined);
 
   const getApiService = async () => {
@@ -26,10 +27,16 @@ function Homework_09() {
     const result = await response.json();
 
     if (response.ok) {
-      setJoke(`${result.setup} ${result.punchline}`);
+      setSetup(result.setup);
+      setPunchline(undefined);
       setError(undefined);
+
+      setTimeout(() => {
+        setPunchline(result.punchline);
+      }, 3000);
     } else {
-      setJoke(undefined);
+      setSetup(undefined);
+      setPunchline(undefined);
       setError("Some Network Error");
     }
   };
@@ -42,9 +49,21 @@ function Homework_09() {
     <PageWrapper>
       <Card>
         <ContainerJokes>
-          <Text>{error ? error : Joke}</Text>
+          <Text>
+            {error ? (
+              error
+            ) : (
+              <>
+                {setup}
+                <br />
+                {punchline}
+              </>
+            )}
+          </Text>
         </ContainerJokes>
-        <Btn type="button" onClick={getApiService}>Get new joke</Btn>
+        <Btn type="button" onClick={getApiService}>
+          Get new joke
+        </Btn>
       </Card>
     </PageWrapper>
   );

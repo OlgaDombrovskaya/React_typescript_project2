@@ -39,4 +39,4 @@ export const Btn = styled.button`
   font-size: 20px;
   font-weight: bold;
   padding: 20px;
-`
+`;
