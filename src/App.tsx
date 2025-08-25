@@ -23,7 +23,7 @@ import Homework_09 from "homeworks/Homework_09/Homework_09";
 
 function App() {
   return (
-    // React Fragment остается
+    // React Fragment остается как обертка
     <>
       <GlobalStyles />
       {/* Consultations */}

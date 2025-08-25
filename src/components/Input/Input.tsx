@@ -25,9 +25,11 @@ function Input({
         value={value}
         onChange={onChange}
       />
+      
        {!!error && <ErrorText>{error}</ErrorText>}
     </InputWrapper>
   );
 }
+// условный рендеринг 
 
 export default Input;
