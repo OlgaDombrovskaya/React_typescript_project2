@@ -1,5 +1,5 @@
 import { useState, type JSX } from 'react'
-import styles from './Sandwich.module.css'
+import { Container, Btn, Title, Paragraph, Img } from "./styles.ts";
 
 export default function Sandwich():JSX.Element {
     const [sandwich,setSandwich] = useState<string>("Бутербродный конфигуратор : ");
@@ -20,16 +20,16 @@ export default function Sandwich():JSX.Element {
     }
   return (
     <div>
-      <h1>Sandwich</h1>
-      <img src="https://cropper.watch.aetnd.com/cdn.watch.aetnd.com/sites/2/2018/05/hungry-story-of-the-sandwich-iStock_000016810360Large.jpg" alt="" />
-      <p>{sandwich}</p>
-      <div className={`${styles.container} ${styles.font}`}>
-        <button className={styles.btn} type="button" onClick={handleAddCheese}>Добавить СЫР</button>
-        <button className={styles.btn} type="button" onClick={handleAddTomato}>Добавить ПОМИДОР</button>
-        <button className={styles.btn} type="button" onClick={handleAddBread}>Добавить ХЛЕБ</button>
-        <button className={styles.btn} type="button" onClick={handleAddBacon}>Добавить  БЕКОН</button>
-        <button className={styles.btn} type="button" onClick={handleReset}>Очистить</button>
-      </div>
+      <Title>Sandwich</Title>
+      <Img src="https://cropper.watch.aetnd.com/cdn.watch.aetnd.com/sites/2/2018/05/hungry-story-of-the-sandwich-iStock_000016810360Large.jpg" alt="" />
+      <Paragraph>{sandwich}</Paragraph>
+      <Container>
+        <Btn onClick={handleAddCheese}>Добавить СЫР</Btn>
+        <Btn onClick={handleAddTomato}>Добавить ПОМИДОР</Btn>
+        <Btn onClick={handleAddBread}>Добавить ХЛЕБ</Btn>
+        <Btn onClick={handleAddBacon}>Добавить  БЕКОН</Btn>
+        <Btn onClick={handleReset}>Очистить</Btn>
+      </Container>
     </div>
   )
 }

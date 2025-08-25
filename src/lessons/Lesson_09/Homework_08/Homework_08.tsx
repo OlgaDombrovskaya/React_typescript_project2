@@ -7,9 +7,14 @@ import { PageWrapper, ElementControl, Text } from "./styles";
 import { generateNumber } from "./data";
 
 function Homework_08() {
-  // Так делать нельзя, т.к это действие приведет к лишним вызовам функции generateNumber() при каждом перерендере компонента Homework_08
+  // вопрос был: зачем нам в useState хранить функции колбэк в качестве значений по умолчанию. (редко используется, но для оптимизации применяется)
+  // Так делать нельзя, т.к это действие приведет к лишним вызовам функции generateNumber() 
+  // при каждом перерендере компонента Homework_08
   // const number = generateNumber();
-  const [generatedValue, setGeneratedValue] = useState(generateNumber); //  В таком варианте(когда мы передаем в useState  в качестве значения по умолчанию функцию callback, она вызвается только 1 раз при первичном рендере, при повторных рендерах, она не вызвается, вызвать ее можно только через setGeneratedValue)
+  const [generatedValue, setGeneratedValue] = useState(generateNumber); //  В таком варианте
+  // (когда мы передаем в useState  в качестве значения по умолчанию функцию callback, 
+  // она вызвается только 1 раз при первичном рендере, при повторных рендерах, она не вызвается, 
+  // вызвать ее можно только через setGeneratedValue)
   const [count, setCount] = useState<number>(0);
 
   return (

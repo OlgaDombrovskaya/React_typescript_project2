@@ -9,6 +9,7 @@ import styled from "@emotion/styled";
 
 interface InputComponentProps {
   $hasError?: string | undefined;
+  disabled?: boolean;
 }
 
 const generateBorderColor = (
