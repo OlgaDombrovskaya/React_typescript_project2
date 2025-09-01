@@ -38,10 +38,10 @@ function ContactUs() {
     },
   });
 
-  // Вопрос: нужно ли добавить noValidate (отключение встроенной валидацию браузера), ведь за валидацию полностью отвечает Formik + Yup.
-  // ведь может сработать нативная валидация браузера ещё до Formik, и это иногда «мешает» (например, Chrome пишет свои ошибки на английском)
+  // Можно добавить noValidate (отключение встроенной валидацию браузера), так как за валидацию полностью отвечает Formik + Yup.
+  // может сработать нативная валидация браузера ещё до Formik, и это иногда «мешает» (например, Chrome пишет свои ошибки на английском)
   return (
-    <ContactFormContainer onSubmit={formik.handleSubmit}>
+    <ContactFormContainer onSubmit={formik.handleSubmit}noValidate>
       <Title>Contact us</Title>
 
       <InputsContainer>
