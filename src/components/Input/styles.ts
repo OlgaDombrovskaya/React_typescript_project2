@@ -57,13 +57,13 @@ export const InputComponent = styled.input<InputComponentProps>`
   }
 
   &::placeholder {
-    color: #6f6f6f;
+    color: #9c9b9bff;
     font-size: 16px;
   }
 `;
 export const InputLabel = styled.label`
-  font-size: 16px;
-  color: hsl(0, 0%, 44%);
+  font-size: 18px;
+  color: #4b4a4aff;
 `;
 export const InputWrapper = styled.div`
   display: flex;
