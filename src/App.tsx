@@ -1,4 +1,14 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import GlobalStyles from "styles/GlobalStyles";
+
+//Pages
+import Home from "./pages/Home/Home";
+import ContactUs from "pages/ContactUs/ContactUs";
+import LogIn from "pages/LogIn/LogIn";
+import About from "pages/About/About";
+
+//Components
+import Layout from "components/Layout/Layout";
 
 //Consultation
 // import Consultation_03 from "consultations/Consultation_03/Consultation_03";
@@ -14,8 +24,7 @@ import GlobalStyles from "styles/GlobalStyles";
 // import Homework_08 from "lessons/Lesson_09/Homework_08/Homework_08";
 // import Homework_09 from "homeworks/Homework_09/Homework_09";
 // import Homework_09 from "lessons/Lesson_10/Homework_09/Homework_09";
-import Homework_11 from "homeworks/Homework_11/Homework_11";
-
+// import Homework_11 from "homeworks/Homework_11/Homework_11";
 
 // Lessons
 // import Lesson_06 from "lessons/Lesson_06/Lesson_06"
@@ -29,29 +38,38 @@ import Homework_11 from "homeworks/Homework_11/Homework_11";
 function App() {
   return (
     // React Fragment остается как обертка
-    <>
+    <BrowserRouter>
       <GlobalStyles />
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contactUs" element={<ContactUs />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<LogIn />} />
+          <Route path="*" element="Page Not Found" />
+        </Routes>
+      </Layout>
       {/* Consultations */}
       {/* <Consultation_03 /> */}
       {/* <Consultation_04 /> */}
       {/* <Consultation_05 /> */}
-       {/* <RundomDog/> */}
+      {/* <RundomDog/> */}
 
       {/* Homeworks */}
       {/* <Homework_06 /> */}
       {/* <Homework_07 /> */}
       {/* <Homework_08 /> */}
       {/* <Homework_09 /> */}
-      <Homework_11 />
+      {/* <Homework_11 /> */}
 
       {/* Lessons */}
       {/* <Lesson_06 /> */}
       {/* <Lesson_07 /> */}
       {/* <Lesson_08 /> */}
       {/* <Lesson_09 /> */}
-       {/* <Lesson_10 /> */}
-       {/* <Lesson_11 /> */}
-    </>
+      {/* <Lesson_10 /> */}
+      {/* <Lesson_11 /> */}
+    </BrowserRouter>
   );
 }
 
