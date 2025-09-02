@@ -3,6 +3,10 @@ import GlobalStyles from "styles/GlobalStyles";
 
 //Pages
 import Home from "./pages/Home/Home";
+import Clients from "pages/Clients/Clients";
+import Netflix from "pages/Clients/Netflix/Netflix";
+import Zara from "pages/Clients/Zara/Zara";
+import LePetitChef from "pages/Clients/LePetitChef/LePetitChef";
 import ContactUs from "pages/ContactUs/ContactUs";
 import LogIn from "pages/LogIn/LogIn";
 import About from "pages/About/About";
@@ -43,6 +47,10 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/clients" element={<Clients />} />
+          <Route path="/clients/netflix" element={<Netflix />} />
+          <Route path="/clients/zara" element={<Zara />} />
+          <Route path="/clients/le_petit_chef" element={<LePetitChef />} />
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<LogIn />} />
