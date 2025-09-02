@@ -18,6 +18,7 @@ import Layout from "components/Layout/Layout";
 // import Consultation_03 from "consultations/Consultation_03/Consultation_03";
 // import Consultation_05 from "consultations/Consultation_05/Consultation_05";
 // import RundomDog from "consultations/Consultation_05/RundomDog";
+import Consultation_06 from "consultations/Consultation_06/toodo";
 
 //Homeworks
 // import Homework_06 from "./homeworks/Homework_06/Homework_06";
@@ -44,7 +45,7 @@ function App() {
     // React Fragment остается как обертка
     <BrowserRouter>
       <GlobalStyles />
-      <Layout>
+      {/* <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/clients" element={<Clients />} />
@@ -56,12 +57,13 @@ function App() {
           <Route path="/login" element={<LogIn />} />
           <Route path="*" element="Page Not Found" />
         </Routes>
-      </Layout>
+      </Layout> */}
       {/* Consultations */}
       {/* <Consultation_03 /> */}
       {/* <Consultation_04 /> */}
       {/* <Consultation_05 /> */}
       {/* <RundomDog/> */}
+       <Consultation_06 />
 
       {/* Homeworks */}
       {/* <Homework_06 /> */}
