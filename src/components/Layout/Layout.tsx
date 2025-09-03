@@ -41,6 +41,15 @@ function Layout({ children }: LayoutProps) {
             Home
           </HeaderLink>
           <HeaderLink
+            to="/clients"
+            style={({ isActive }) => ({
+              fontWeight: isActive ? "bold" : "normal",
+              textDecoration: isActive ? "underline" : "none",
+            })}
+          >
+            Clients
+          </HeaderLink>
+          <HeaderLink
             to="/contactUs"
             style={({ isActive }) => ({
               fontWeight: isActive ? "bold" : "normal",
@@ -79,6 +88,7 @@ function Layout({ children }: LayoutProps) {
         </FooterLogo>
         <FooterNavigation>
           <FooterLink to="/">Home</FooterLink>
+          <FooterLink to="/clients">Clients</FooterLink>
           <FooterLink to="/contactUs">Contact Us</FooterLink>
           <FooterLink to="/about">About</FooterLink>
           <FooterLink to="/login">Login</FooterLink>
