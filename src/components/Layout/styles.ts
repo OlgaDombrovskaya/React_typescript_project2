@@ -5,6 +5,7 @@ export const LayoutWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
+  min-height: 100vh;
 `;
 
 export const Header = styled.header`
