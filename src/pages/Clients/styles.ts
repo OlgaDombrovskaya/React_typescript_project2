@@ -14,9 +14,9 @@ export const ButtonControl = styled.div`
 export const Title = styled.h1`
   display: flex;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 30px;
   margin-bottom: 10px;
-  color: #333;
+  color: rgba(51, 51, 51, 1);
 `;
 
 export const CompanyList = styled.ul`
@@ -26,7 +26,16 @@ export const CompanyList = styled.ul`
   gap: 16px;
 `;
 
+export const CompanyTitle = styled.p`
+  font-size: 40px;
+  color: rgba(86, 19, 101, 1);
+`;
+
+export const CompanyDescription = styled.p`
+  font-size: 26px;
+`;
+
 export const CompanyLink = styled.li`
   font-size: 20px;
-  color: #f608c2ff;
+  color: rgba(246, 8, 194, 1);
 `;
