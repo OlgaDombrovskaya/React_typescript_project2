@@ -2,23 +2,24 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import GlobalStyles from "styles/GlobalStyles";
 
 // Pages
-import Home from "./pages/Home/Home";
-import Clients from "pages/Clients/Clients";
-import Netflix from "pages/Clients/Netflix/Netflix";
-import Zara from "pages/Clients/Zara/Zara";
-import LePetitChef from "pages/Clients/LePetitChef/LePetitChef";
-import ContactUs from "pages/ContactUs/ContactUs";
-import LogIn from "pages/LogIn/LogIn";
-import About from "pages/About/About";
+// import Home from "./pages/Home/Home";
+// import Clients from "pages/Clients/Clients";
+// import Netflix from "pages/Clients/Netflix/Netflix";
+// import Zara from "pages/Clients/Zara/Zara";
+// import LePetitChef from "pages/Clients/LePetitChef/LePetitChef";
+// import ContactUs from "pages/ContactUs/ContactUs";
+// import LogIn from "pages/LogIn/LogIn";
+// import About from "pages/About/About";
 
-//Components
-import Layout from "components/Layout/Layout";
+// //Components
+// import Layout from "components/Layout/Layout";
 
 //Consultation
 // import Consultation_03 from "consultations/Consultation_03/Consultation_03";
 // import Consultation_05 from "consultations/Consultation_05/Consultation_05";
 // import RundomDog from "consultations/Consultation_05/RundomDog";
 // import Consultation_06 from "consultations/Consultation_06/TodoApp";
+import Consultation_07 from "consultations/Consultation_07/TodoAppNew";
 
 //Homeworks
 // import Homework_06 from "./homeworks/Homework_06/Homework_06";
@@ -38,14 +39,14 @@ import Layout from "components/Layout/Layout";
 // import Lesson_09 from "lessons/Lesson_09/Lesson_09/Lesson_09";
 // import Lesson_10 from "lessons/Lesson_10/Lesson_10";
 // import Lesson_10_Project from "lessons/Lesson_10/Lesson_10_Project/Lesson_10";
-import Lesson_11 from "lessons/Lesson_11/Lesson_11/Lesson_11";
+// import Lesson_11 from "lessons/Lesson_11/Lesson_11/Lesson_11";
 
 function App() {
   return (
     // React Fragment остается как обертка
     <BrowserRouter>
       <GlobalStyles />
-      <Layout>
+      {/* <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/clients" element={<Clients />} />
@@ -58,13 +59,14 @@ function App() {
           <Route path="/lesson-11" element={<Lesson_11 />} />
           <Route path="*" element="Page Not Found" />
         </Routes>
-      </Layout>
+      </Layout> */}
       {/* Consultations */}
       {/* <Consultation_03 /> */}
       {/* <Consultation_04 /> */}
       {/* <Consultation_05 /> */}
       {/* <RundomDog/> */}
-       {/* <Consultation_06 /> */}
+      {/* <Consultation_06 /> */}
+      <Consultation_07 />
 
       {/* Homeworks */}
       {/* <Homework_06 /> */}

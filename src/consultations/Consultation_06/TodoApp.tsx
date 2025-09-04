@@ -36,9 +36,16 @@ const addTodo = ()=>{
 const toggleTodo = (id:number)=>{
   setTodos(
     // Создаём новый массив на основе старого через map.
-    todos.map((todo)=>todo.id === id ? {...todo, completed: !todo.completed}: todo)
+    
+     todos.map((todo)=>todo.id === id ? {...todo, completed: !todo.completed}: todo)
     // Если id совпал — возвращаем копию объекта с инвертированным completed.
-        // { ...todo } — поверхностная копия объекта.
+    /* условие ? если_истина : если_ложь.
+      
+    Если истина: { ...todo, completed: !todo.completed }
+     ...todo — распыление: копируем все поля объекта todo в новый объект (поверхностная копия).
+     completed: !todo.completed — переопределяем поле completed на противоположное значение (true → false, false → true). 
+     В объекте в литерале последнее объявление свойства побеждает, поэтому completed после распыления перезаписывается.*/
+     
   );
 };
 // Функция удаления задачи по id.
