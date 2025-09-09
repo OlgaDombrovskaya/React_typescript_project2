@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-
+import { Link } from "react-router-dom";
 export const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -31,11 +31,7 @@ export const CompanyTitle = styled.p`
   color: rgba(86, 19, 101, 1);
 `;
 
-export const CompanyDescription = styled.p`
-  font-size: 26px;
-`;
-
-export const CompanyLink = styled.li`
+export const CompanyLink = styled(Link)`
   font-size: 20px;
-  color: rgba(246, 8, 194, 1);
+  color: rgba(75, 27, 116, 1);
 `;

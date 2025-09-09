@@ -1,21 +1,22 @@
-import { Link } from "react-router-dom";
-
-import { CompanyLink, CompanyList, PageWrapper, Title } from "./styles";
+import { useEffect } from "react";
+import { CompanyLink, CompanyList, PageWrapper, Title } from "./styles"; 
+import { ROUTES } from "constants/routes"
 
 function Clients() {
+useEffect(() => {
+    // Unmounting
+    return () => {
+      console.log("Unmounting Clients Component");
+    };
+  }, []);
+
   return (
     <PageWrapper>
       <Title>Clients</Title>
       <CompanyList>
-        <CompanyLink>
-          <Link to="/clients/netflix">Netflix</Link>
-        </CompanyLink>
-        <CompanyLink>
-          <Link to="/clients/zara">Zara</Link>
-        </CompanyLink>
-        <CompanyLink>
-          <Link to="/clients/le_petit_chef">Le Petit Chef</Link>
-        </CompanyLink>
+          <CompanyLink to={ROUTES.NETFLIX}>Netflix</CompanyLink>
+          <CompanyLink to={ROUTES.ZARA}>Zara</CompanyLink>
+          <CompanyLink to={ROUTES.LE_PETIT_CHEF}>Le Petit Chef</CompanyLink>
       </CompanyList>
     </PageWrapper>
   );

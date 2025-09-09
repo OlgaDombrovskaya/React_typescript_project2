@@ -2,24 +2,25 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import GlobalStyles from "styles/GlobalStyles";
 
 // Pages
-// import Home from "./pages/Home/Home";
-// import Clients from "pages/Clients/Clients";
-// import Netflix from "pages/Clients/Netflix/Netflix";
-// import Zara from "pages/Clients/Zara/Zara";
-// import LePetitChef from "pages/Clients/LePetitChef/LePetitChef";
-// import ContactUs from "pages/ContactUs/ContactUs";
-// import LogIn from "pages/LogIn/LogIn";
-// import About from "pages/About/About";
+import Home from "./pages/Home/Home";
+import Clients from "pages/Clients/Clients";
+import ContactUs from "pages/ContactUs/ContactUs";
+import LogIn from "pages/LogIn/LogIn";
+import About from "pages/About/About";
+import Netflix from "pages/Clients/Netflix/Netflix";
+import Zara from "pages/Clients/Zara/Zara";
+import LePetitChef from "pages/Clients/LePetitChef/LePetitChef";
+import { ROUTES } from "constants/routes";
 
 // //Components
-// import Layout from "components/Layout/Layout";
+import Layout from "components/Layout/Layout";
 
 //Consultation
 // import Consultation_03 from "consultations/Consultation_03/Consultation_03";
 // import Consultation_05 from "consultations/Consultation_05/Consultation_05";
 // import RundomDog from "consultations/Consultation_05/RundomDog";
 // import Consultation_06 from "consultations/Consultation_06/TodoApp";
-import Consultation_07 from "consultations/Consultation_07/TodoAppNew";
+// import Consultation_07 from "consultations/Consultation_07/TodoAppNew";
 
 //Homeworks
 // import Homework_06 from "./homeworks/Homework_06/Homework_06";
@@ -40,24 +41,24 @@ import Consultation_07 from "consultations/Consultation_07/TodoAppNew";
 // import Lesson_10 from "lessons/Lesson_10/Lesson_10";
 // import Lesson_10_Project from "lessons/Lesson_10/Lesson_10_Project/Lesson_10";
 // import Lesson_11 from "lessons/Lesson_11/Lesson_11/Lesson_11";
+import Lesson_13 from "lessons/Lesson_13/Lesson_13";
 
 function App() {
   return (
-    // React Fragment остается как обертка
     <BrowserRouter>
       <GlobalStyles />
-      {/* <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/clients" element={<Clients />} />
-          <Route path="/clients/netflix" element={<Netflix />} />
-          <Route path="/clients/zara" element={<Zara />} />
-          <Route path="/clients/le_petit_chef" element={<LePetitChef />} />
-          <Route path="/contactUs" element={<ContactUs />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/login" element={<LogIn />} />
+      {/* <Layout> */}
+        {/* <Routes>
+          <Route path={ROUTES.HOME} element={<Home />} />
+          <Route path={ROUTES.CONTACT_US} element={<ContactUs />} />
+          <Route path={ROUTES.ABOUT} element={<About />} />
+          <Route path={ROUTES.LOGIN} element={<LogIn />} />
+          <Route path={ROUTES.CLIENTS} element={<Clients />} />
           <Route path="/lesson-11" element={<Lesson_11 />} />
-          <Route path="*" element="Page Not Found" />
+          <Route path={ROUTES.NETFLIX} element={<Netflix />} />
+          <Route path={ROUTES.ZARA} element={<Zara />} />
+          <Route path={ROUTES.LE_PETIT_CHEF} element={<LePetitChef />} />
+          <Route path={ROUTES.NOT_FOUND} element="Page Not Found" />
         </Routes>
       </Layout> */}
       {/* Consultations */}
@@ -66,7 +67,7 @@ function App() {
       {/* <Consultation_05 /> */}
       {/* <RundomDog/> */}
       {/* <Consultation_06 /> */}
-      <Consultation_07 />
+      {/* <Consultation_07 /> */}
 
       {/* Homeworks */}
       {/* <Homework_06 /> */}
@@ -82,6 +83,7 @@ function App() {
       {/* <Lesson_09 /> */}
       {/* <Lesson_10 /> */}
       {/* <Lesson_11 /> */}
+      <Lesson_13 />
     </BrowserRouter>
   );
 }

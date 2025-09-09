@@ -1,21 +1,16 @@
-import { useNavigate } from "react-router-dom";
-import Button from "components/Button/Button";
-import { PageWrapper, ButtonControl, CompanyTitle, CompanyDescription } from "../styles";
+import { PageWrapper, CompanyTitle } from "../styles";
+import ClientTemplate from "pages/component/ClientTemplate/ClientTemplate";
 
-export default function LePetitChef() {
-    const navigate = useNavigate();
-
-    const goBack = () => {
-        navigate(-1);
-    };
-
-    return (
-        <PageWrapper>
-            <CompanyTitle>Le Petit Chef</CompanyTitle>
-            <CompanyDescription>Уникальный гастрономический опыт: кулинарное шоу с 3D-проекцией прямо на тарелке.</CompanyDescription>
-            <ButtonControl>
-                <Button onClick={goBack} name="Go back" />
-            </ButtonControl>
-        </PageWrapper>
-    );
+function LePetitChef() {
+  return (
+    <PageWrapper>
+      <CompanyTitle>Le Petit Chef</CompanyTitle>
+      <ClientTemplate>
+        Уникальный гастрономический опыт: кулинарное шоу с 3D-проекцией прямо на
+        тарелке.
+      </ClientTemplate>
+    </PageWrapper>
+  );
 }
+
+export default LePetitChef;

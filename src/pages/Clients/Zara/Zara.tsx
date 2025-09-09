@@ -1,22 +1,15 @@
-import { useNavigate } from "react-router-dom";
-import Button from "components/Button/Button";
-import { PageWrapper, ButtonControl, CompanyTitle, CompanyDescription } from "../styles";
+import { PageWrapper, CompanyTitle} from "../styles";
+import ClientTemplate from "pages/component/ClientTemplate/ClientTemplate";
 
-export default function Zara() {
-    const navigate = useNavigate();
-    const goBack = () => {
-        navigate(-1);
-    };
+function Zara() {
     return (
         <PageWrapper>
             <CompanyTitle>Zara</CompanyTitle>
-            <CompanyDescription>
+            <ClientTemplate>
                 Международный бренд модной одежды с коллекциями для женщин, мужчин и
                 детей.
-            </CompanyDescription>
-            <ButtonControl>
-                <Button onClick={goBack} name="Go back" />
-            </ButtonControl>
+            </ClientTemplate>
         </PageWrapper>
     );
 }
+export default Zara;

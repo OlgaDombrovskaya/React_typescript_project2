@@ -79,3 +79,12 @@ export const FooterLink = styled(Link)`
   font-size: 14px;
   font-weight: bold;
 `;
+
+//вынесли объект, но можно было и оставить в Layout.tsx как
+//style={({ isActive }) => ({
+// fontWeight: isActive ? "bold" : "normal",
+// textDecoration: isActive ? "underline" : "none",})}
+export const NavlinkProps = (isActive: boolean) => ({
+  fontWeight: isActive ? "bold" : "normal",
+  textDecoration: isActive ? "underline" : "none",
+});
