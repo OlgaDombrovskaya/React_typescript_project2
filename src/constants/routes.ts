@@ -27,7 +27,7 @@ export const ROUTES: POUTES_DATA = {
 // здесь уже часть от ROUTES -  только те что в навигационном меню, далее пропишем все Layout.tsx
 export enum NAVIGATION_MENU_ROUTES {
   Home = "/",
-  Contact_Us = "/contactUs",
+  "Contact Us" = "/contactUs",
   About = "/about",
   Login = "/login",
   Clients = "/clients",
