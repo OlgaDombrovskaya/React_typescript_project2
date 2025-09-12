@@ -1,3 +1,4 @@
+//Шаг 1: Импортируем функцию createContext из библиотеки react
 import { createContext, useState } from "react";
 import Button from "components/Button/Button";
 

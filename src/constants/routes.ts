@@ -8,6 +8,9 @@ interface POUTES_DATA {
   LE_PETIT_CHEF: string;
   NETFLIX: string;
   NOT_FOUND: string;
+  APPLE: string;
+  GOOGLE: string;
+  FACEBOOK: string;
 }
 
 //общий ROUTES
@@ -21,14 +24,18 @@ export const ROUTES: POUTES_DATA = {
   NETFLIX: "/clients/netflix",
   LE_PETIT_CHEF: "/clients/le_petit_chef",
   NOT_FOUND: "*",
+  APPLE: "/clients/apple",
+  GOOGLE: "/clients/facebook",
+  FACEBOOK: "/clients/google",
 };
 
 //enum уже типизирован по умолчанию,
 // здесь уже часть от ROUTES -  только те что в навигационном меню, далее пропишем все Layout.tsx
 export enum NAVIGATION_MENU_ROUTES {
   Home = "/",
-  Contact_Us = "/contactUs",
+  "Contact Us" = "/contactUs",
   About = "/about",
   Login = "/login",
   Clients = "/clients",
 }
+
