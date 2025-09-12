@@ -8,6 +8,9 @@ interface POUTES_DATA {
   LE_PETIT_CHEF: string;
   NETFLIX: string;
   NOT_FOUND: string;
+  APPLE: string;
+  GOOGLE: string;
+  FACEBOOK: string;
 }
 
 //общий ROUTES
@@ -21,6 +24,9 @@ export const ROUTES: POUTES_DATA = {
   NETFLIX: "/clients/netflix",
   LE_PETIT_CHEF: "/clients/le_petit_chef",
   NOT_FOUND: "*",
+  APPLE: "/clients/apple",
+  GOOGLE: "/clients/facebook",
+  FACEBOOK: "/clients/google",
 };
 
 //enum уже типизирован по умолчанию,
@@ -32,3 +38,4 @@ export enum NAVIGATION_MENU_ROUTES {
   Login = "/login",
   Clients = "/clients",
 }
+
